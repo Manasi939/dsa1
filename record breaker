@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include<climits>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n+1];
+    arr[n]=-1;
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    int maxi=-1;
+    int j=0;
+    int ans=0;
+    while(j<n)
+    {
+        
+       if( arr[j]>maxi && arr[j]>arr[j+1])
+       {
+           ans++;
+       }
+       maxi=max(maxi,arr[j]);
+       j++;
+    }
+    cout<<ans;
+    
+}
