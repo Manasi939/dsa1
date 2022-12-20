@@ -1,0 +1,39 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int kadane(int arr[10],int n)
+{
+    int sum=0;
+    int maxi=INT_MIN;
+    for(int i=0;i<n;i++)
+    {
+        sum=sum+arr[i];
+        if(sum<0)
+        {
+            sum=0;
+        }
+       maxi=max(sum,maxi);
+    }
+    return maxi;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+     int wrap=0,t=0;
+     int a3[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        t=t+arr[i];
+        a3[i]=-arr[i];
+    }
+    int nonw=kadane(arr,n);
+    cout<<kadane(a3,n);
+     wrap=t+kadane(a3,n);
+     int maxi=max(wrap,nonw);
+     cout<<maxi;
+    
+   
+}
