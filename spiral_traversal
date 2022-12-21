@@ -1,0 +1,47 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int sr,sc,er,ec;
+    cin>>sr>>sc>>er>>ec;
+    int arr[er+1][ec+1];
+    for(int i=sr;i<=er;i++)
+    { for(int j=sc;j<=ec;j++)
+    {
+        cin>>arr[i][j];
+    }
+       
+    }
+    while(sc<=ec || sr<=er)
+    {
+       for(int j=sc;j<=ec;j++) 
+       {
+           cout<<arr[sr][j];
+       }
+       
+       for(int j=sr+1;j<=er;j++) 
+       {
+           cout<<arr[j][ec];
+       }
+        for(int j=ec-1;j>=sc;j--) 
+       {
+           cout<<arr[er][j];
+       }
+       for(int j=er-1;j>=sr+1;j--) 
+       {
+           cout<<arr[sc][j];
+       }
+       
+        sc++;
+        ec--;
+        sr++;
+        er--;
+        
+        
+    }
+  
+   
+}
+
