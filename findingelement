@@ -1,0 +1,57 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int r,c;
+    cin>>r>>c;
+    int arr[r][c];
+    for(int i=0;i<r;i++)
+    { for(int j=0;j<c;j++)
+    {
+        cin>>arr[i][j];
+    }
+       
+    }
+    
+        
+       
+    
+     for(int i=0;i<r;i++)
+    { for(int j=0;j<c;j++)
+    {
+        cout<<arr[i][j]<<" ";
+    }
+      cout<<endl; 
+    }
+    int num;
+    cin>>num;
+    int cs;
+    int i=0,j=c;
+    if(num>=arr[0][0] && num<=arr[r-1][c-1])
+    {
+     while(i<=r && j>=0)
+     {
+        if(num==arr[i][j]) 
+        {
+            cout<<"found";
+            break;
+        }
+        else if(arr[i][j]>num){                                               
+                       j--;
+        }
+        else{
+            i++;
+        }
+        
+         
+     }
+    
+    
+    }
+      
+   
+   
+}
+
