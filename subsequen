@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+void se(string n,int i,string s)
+{
+    
+    if(n.size()==i)
+    {
+        cout<<s<<" ";
+        return;
+    }
+    
+    se(n,i+1,s+n[i]);
+    se(n,i+1,s);
+   
+    
+    
+    
+}
+int main()
+{
+    string n,s=" ";
+    cin>>n;
+     int i=0;
+     cout<<n.size();
+   se(n,i,s);
+}
