@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int pal(string n,int s,int e)
+{
+    if(s>=e )
+    {
+        return 0;
+    }
+    if(n[s]==n[e])
+    {
+        s++;
+        e--;
+        pal(n,s,e);
+        return 0;
+    }
+    else return 1;
+    
+}
+int main()
+{
+    string n;
+    cin>>n;
+   
+    cout<<pal(n,0,(n.length()-1));
+}
